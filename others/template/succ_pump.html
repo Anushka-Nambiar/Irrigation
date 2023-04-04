@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='irris.css')}}">
+</head>
+<body>
+    <h1 class="bina">
+        B1NARY C0DERS
+    </h1>
+    <div class="logo">
+        </div>
+    <form action="{{url_for('pump')}}", method="POST">
+        <h1>Monitor It!!!</h1>
+
+        <p>Current Soil Mosisture Level: {{ moisture }}</p>
+	  <p style="color:blue; ">{{rain}}</p>
+	<p style="font-size: 35px; color:red;">{{msg}}</p>
+        <label for="duration"><p>Watering duration in minutes:</p> </label>
+        <input type="number" name="duration" required id="number">
+        <input type="submit" name="submit" id="submit">
+    </form>
+   
+</body>
+</html>

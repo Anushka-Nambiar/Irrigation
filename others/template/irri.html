@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='irris.css')}}">
+</head>
+<body>
+    <h1 class="bina">
+        B1NARY C0DERS
+    </h1>
+    <div class="logo">
+        </div>
+    <form action="{{url_for('watering')}}" method="post">
+        <h1>Monitor It!!!</h1>
+        <p>Please enter your longitude and latitude:</p>
+        <input name="lon" type="text" placeholder="longitude">
+        <input name="lat" type="text" placeholder="latitude">
+        <input type="submit" name="submit" id="submit">
+
+    </form>
+   
+</body>
+</html>
